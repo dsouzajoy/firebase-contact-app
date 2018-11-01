@@ -69,6 +69,11 @@ $(document).ready(function(){
     }
     
   });
+    
+    $("#in_login").click(function(){
+     $('#loginEmail').val('');
+        $('#loginPassword').val('');
+});
 
   //Login
   $('#loginForm').on('submit', function (e) {
@@ -76,6 +81,7 @@ $(document).ready(function(){
     $('#loginModal').modal('hide');
     $('#messageModalLabel').html(spanText('<i class="fa fa-cog fa-spin"></i>', ['center', 'info']));
     $('#messageModal').modal('show');
+
 
     if( $('#loginEmail').val() != '' && $('#loginPassword').val() != '' ){
       //login the user
@@ -137,10 +143,10 @@ $(document).ready(function(){
           $('.user-info .user-name').hide();
         } else if(user.displayName) {
           $('.user-info img').hide();
-          $('.user-info').append('<span class="user-name">'+user.displayName+'</span>');
+          $('.user-info').html('<span class="user-name">'+user.displayName+'</span>');
         } else if(info.firstName) {
           $('.user-info img').hide();
-          $('.user-info').append('<span class="user-name">'+info.firstName+'</span>');
+          $('.user-info').html('<span class="user-name">'+info.firstName+'</span>');
         }
       });
       contactsRef.child(user.uid).on('child_added', onChildAdd);
