@@ -71,3 +71,17 @@ a:hover{
     clear:both;
     height:150px;
 }
+
+.delBtn{
+     background-color: #5d8ffc;
+   color: white;
+    border:1px solid white;
+    height:30px;
+    border-radius:5px;
+}
+
+.delBtn:hover{
+    background-color:white;
+    color:blue;
+    border-color: #5d8ffc;
+}
