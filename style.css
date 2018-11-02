@@ -67,3 +67,7 @@ a:hover{
     color:white;
     
 }
+.clear{
+    clear:both;
+    height:150px;
+}
